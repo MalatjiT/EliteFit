@@ -37,6 +37,17 @@
             align-items: center;
             padding: 1rem 2rem;
         }
+        .sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10000;
+            margin: 0;
+        }
+        .sticky + .hero {
+            padding-top: 102px;
+        }
         @media (max-width: 512px) {
             header {
                 flex-direction: column;
@@ -213,7 +224,20 @@
         </div>
     </footer>
     <script>
-        
+         window.onscroll = function () {
+            stickyHeader();
+            }
+
+            let header = document.querySelector("header");
+            let sticky = header.offsetTop;
+
+            function stickyHeader() {
+                if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                } else {
+                header.classList.remove("sticky");
+                }
+            } 
     </script>
 </body>
 </html>
