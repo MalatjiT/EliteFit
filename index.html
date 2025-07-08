@@ -32,7 +32,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
         }
         .sticky {
             position: fixed;
@@ -45,6 +44,12 @@
         .sticky + .hero {
             padding-top: 102px;
         }
+.nav-bar > ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         display: flex;
+      }
         @media (max-width: 512px) {
             header {
                 flex-direction: column;
@@ -60,13 +65,7 @@ background: skyblue;
          color: black;
          display: block;
       }
-      .nav-bar > ul {
-         list-style-type: none;
-         margin: 0;
-         padding: 0;
-         width: 100%;
-         display: flex;
-      }
+      
       .nav-bar > ul > li > a {
          padding: 10px;
          background: lightgrey;
