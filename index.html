@@ -52,8 +52,38 @@
                 justify-content: flex-start;
             }
             nav {
-                display: flex;
-            }
+color: #ffffff;
+background: skyblue;
+}
+.nav-bar a {
+         text-decoration: none;
+         color: black;
+         display: block;
+      }
+      .nav-bar > ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         width: 100%;
+         display: flex;
+      }
+      .nav-bar > ul > li > a {
+         padding: 10px;
+         background: lightgrey;
+      }
+      .nav-bar > ul > li > a:hover {
+         background: #173459;
+         color: #f8f9f9;
+      }
+      .nav-bar .active {
+         background: #173459;
+         color: #f8f9f9;
+      }
+      .nav-bar > ul > li {
+         float: left;
+         flex: 1 0 auto;
+         text-align: center;
+      }
         }
         header h1 {
             font-size: 1.8rem;
@@ -152,10 +182,12 @@
     <header>
         <h1>EliteFit</h1>
         <nav>
-            <a href="#about">About</a>
-            <a href="#classes">Classes</a>
-            <a href="#subscribe">Subscribe</a>
-            <a href="#contact">Contact</a>
+<ul>
+ <li><a href="#about">About</a></li>
+  <li><a href="#classes">Classes</a></li>
+<li><a href="#subscribe">Subscribe</a></li>
+ <li><a href="#contact">Contact</a></li>
+</ul>
         </nav>
     </header>
     <main class="hero">
